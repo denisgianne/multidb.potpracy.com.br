@@ -112,6 +112,58 @@ return [
             // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
         ],
 
+        'external' => [
+            'driver' => 'pgsql',
+            'host' => env('EXTERNAL_HOST', '127.0.0.1'),
+            'port' => env('EXTERNAL_PORT', '5499'),
+            'database' => env('EXTERNAL_DATABASE', 'external.potpracy.com.br'),
+            'username' => env('EXTERNAL_USERNAME', 'postgres'),
+            'password' => env('EXTERNAL_PASSWORD', 'secret'),
+            'charset' => 'utf8',
+            'prefix' => '',
+            'schema' => 'public',
+            'sslmode' => 'prefer',
+        ],
+
+        'db01' => [
+            'driver' => 'pgsql',
+            'host' => env('DB01_HOST', '127.0.0.1'),
+            'port' => env('DB01_PORT', '5500'),
+            'database' => env('DB01_DATABASE', 'db01.potpracy.com.br'),
+            'username' => env('DB01_USERNAME', 'postgres'),
+            'password' => env('DB01_PASSWORD', 'secret'),
+            'charset' => 'utf8',
+            'prefix' => '',
+            'schema' => 'public',
+            'sslmode' => 'prefer',
+        ],
+
+        'db02' => [
+            'driver' => 'pgsql',
+            'host' => env('DB02_HOST', '127.0.0.1'),
+            'port' => env('DB02_PORT', '5501'),
+            'database' => env('DB02_DATABASE', 'db02.potpracy.com.br'),
+            'username' => env('DB02_USERNAME', 'postgres'),
+            'password' => env('DB02_PASSWORD', 'secret'),
+            'charset' => 'utf8',
+            'prefix' => '',
+            'schema' => 'public',
+            'sslmode' => 'prefer',
+        ],
+
+        'db03' => [
+            'driver' => 'pgsql',
+            'host' => env('DB03_HOST', '127.0.0.1'),
+            'port' => env('DB03_PORT', '5502'),
+            'database' => env('DB03_DATABASE', 'db03.potpracy.com.br'),
+            'username' => env('DB03_USERNAME', 'postgres'),
+            'password' => env('DB03_PASSWORD', 'secret'),
+            'charset' => 'utf8',
+            'prefix' => '',
+            'schema' => 'public',
+            'sslmode' => 'prefer',
+        ],
+
     ],
 
     /*
@@ -147,7 +199,7 @@ return [
 
         'options' => [
             'cluster' => env('REDIS_CLUSTER', 'redis'),
-            'prefix' => env('REDIS_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_').'_database_'),
+            'prefix' => env('REDIS_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_') . '_database_'),
             'persistent' => env('REDIS_PERSISTENT', false),
         ],
 
