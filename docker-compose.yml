@@ -68,6 +68,162 @@ services:
       - db03_data:/var/lib/postgresql/data
     restart: unless-stopped
 
+  db04-postgres:
+    image: postgres:latest
+    container_name: db04-postgres
+    environment:
+      POSTGRES_DB: db04.potpracy.com.br
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secret
+    ports:
+      - "5503:5432"
+    volumes:
+      - db04_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  db05-postgres:
+    image: postgres:latest
+    container_name: db05-postgres
+    environment:
+      POSTGRES_DB: db05.potpracy.com.br
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secret
+    ports:
+      - "5504:5432"
+    volumes:
+      - db05_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  db06-postgres:
+    image: postgres:latest
+    container_name: db06-postgres
+    environment:
+      POSTGRES_DB: db06.potpracy.com.br
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secret
+    ports:
+      - "5505:5432"
+    volumes:
+      - db06_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  db07-postgres:
+    image: postgres:latest
+    container_name: db07-postgres
+    environment:
+      POSTGRES_DB: db07.potpracy.com.br
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secret
+    ports:
+      - "5506:5432"
+    volumes:
+      - db07_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  db08-postgres:
+    image: postgres:latest
+    container_name: db08-postgres
+    environment:
+      POSTGRES_DB: db08.potpracy.com.br
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secret
+    ports:
+      - "5507:5432"
+    volumes:
+      - db08_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  db09-postgres:
+    image: postgres:latest
+    container_name: db09-postgres
+    environment:
+      POSTGRES_DB: db09.potpracy.com.br
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secret
+    ports:
+      - "5508:5432"
+    volumes:
+      - db09_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  db10-postgres:
+    image: postgres:latest
+    container_name: db10-postgres
+    environment:
+      POSTGRES_DB: db10.potpracy.com.br
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secret
+    ports:
+      - "5509:5432"
+    volumes:
+      - db10_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  db11-postgres:
+    image: postgres:latest
+    container_name: db11-postgres
+    environment:
+      POSTGRES_DB: db11.potpracy.com.br
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secret
+    ports:
+      - "5510:5432"
+    volumes:
+      - db11_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  db12-postgres:
+    image: postgres:latest
+    container_name: db12-postgres
+    environment:
+      POSTGRES_DB: db12.potpracy.com.br
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secret
+    ports:
+      - "5511:5432"
+    volumes:
+      - db12_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  db13-postgres:
+    image: postgres:latest
+    container_name: db13-postgres
+    environment:
+      POSTGRES_DB: db13.potpracy.com.br
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secret
+    ports:
+      - "5512:5432"
+    volumes:
+      - db13_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  db14-postgres:
+    image: postgres:latest
+    container_name: db14-postgres
+    environment:
+      POSTGRES_DB: db14.potpracy.com.br
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secret
+    ports:
+      - "5513:5432"
+    volumes:
+      - db14_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  db15-postgres:
+    image: postgres:latest
+    container_name: db15-postgres
+    environment:
+      POSTGRES_DB: db15.potpracy.com.br
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secret
+    ports:
+      - "5514:5432"
+    volumes:
+      - db15_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
   redis:
     image: redis:alpine
     container_name: multidb-redis
@@ -84,4 +240,16 @@ volumes:
   db01_data:
   db02_data:
   db03_data:
+  db04_data:
+  db05_data:
+  db06_data:
+  db07_data:
+  db08_data:
+  db09_data:
+  db10_data:
+  db11_data:
+  db12_data:
+  db13_data:
+  db14_data:
+  db15_data:
   redis_data: 
