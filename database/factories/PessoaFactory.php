@@ -21,7 +21,7 @@ class PessoaFactory extends Factory
         $nome = $sexo === 'M' 
             ? $this->faker->firstNameMale() . ' ' . $this->faker->lastName()
             : $this->faker->firstNameFemale() . ' ' . $this->faker->lastName();
-        $email = str($nome)->lower()->ascii()->slug('_') . rand(1000, 9999) . '@potpracy.com.br';
+        $email = str($nome)->lower()->ascii()->slug('_') . rand(100000, 999999) . '@potpracy.com.br';
 
         return [
             'nome' => $nome,
