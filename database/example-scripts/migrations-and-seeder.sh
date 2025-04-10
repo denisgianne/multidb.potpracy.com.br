@@ -1,4 +1,5 @@
 # migrations
+php artisan migrate --step;
 php artisan migrate --step --database=external;
 php artisan migrate --step --database=db01;
 php artisan migrate --step --database=db02;

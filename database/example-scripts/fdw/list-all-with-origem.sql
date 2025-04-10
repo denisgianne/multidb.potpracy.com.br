@@ -1,5 +1,7 @@
 -- select count(*) as total
--- FROM (
+select *
+FROM
+(
     select 'local' as origem, * from pessoas
         UNION ALL
     select 'external' as origem, * from external_public.pessoas
@@ -33,6 +35,7 @@
     select 'db14' as origem, * from db14_public.pessoas
       UNION ALL
     select 'db15' as origem, * from db15_public.pessoas
-
+)
+    WHERE nome ilike '%Denis%'
     ORDER BY nome
--- ) as total;
+-- as total;
