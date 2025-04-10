@@ -29,6 +29,45 @@ services:
       - external_data:/var/lib/postgresql/data
     restart: unless-stopped
 
+  db01-postgres:
+    image: postgres:latest
+    container_name: db01-postgres
+    environment:
+      POSTGRES_DB: db01.potpracy.com.br
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secret
+    ports:
+      - "5500:5432"
+    volumes:
+      - db01_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  db02-postgres:
+    image: postgres:latest
+    container_name: db02-postgres
+    environment:
+      POSTGRES_DB: db02.potpracy.com.br
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secret
+    ports:
+      - "5501:5432"
+    volumes:
+      - db02_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  db03-postgres:
+    image: postgres:latest
+    container_name: db03-postgres
+    environment:
+      POSTGRES_DB: db03.potpracy.com.br
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secret
+    ports:
+      - "5502:5432"
+    volumes:
+      - db03_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
   redis:
     image: redis:alpine
     container_name: multidb-redis
@@ -42,4 +81,7 @@ services:
 volumes:
   multidb_data:
   external_data:
+  db01_data:
+  db02_data:
+  db03_data:
   redis_data: 
