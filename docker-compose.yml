@@ -1,0 +1,45 @@
+version: '3.8'
+
+name: multidb-potpracy
+
+services:
+  multidb-postgres:
+    image: postgres:latest
+    container_name: multidb-postgres
+    environment:
+      POSTGRES_DB: multidb.potpracy.com.br
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secret
+    ports:
+      - "5498:5432"
+    volumes:
+      - multidb_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  external-postgres:
+    image: postgres:latest
+    container_name: external-postgres
+    environment:
+      POSTGRES_DB: external.potpracy.com.br
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secret
+    ports:
+      - "5499:5432"
+    volumes:
+      - external_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  redis:
+    image: redis:alpine
+    container_name: multidb-redis
+    ports:
+      - "6398:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+
+volumes:
+  multidb_data:
+  external_data:
+  redis_data: 
